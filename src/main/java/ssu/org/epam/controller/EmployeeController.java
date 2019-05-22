@@ -39,27 +39,27 @@ public class EmployeeController {
         employeeService.addEmployee(employee);
     }
 
-    @GetMapping(value = "/employee/add_project")
+    @PostMapping(value = "/employee/add_project")
     public void addEmployeeToProject(@RequestParam int employeeId, int projectId) throws SQLException {
         employeeService.addEmployeeToProjectById(employeeId, projectId);
     }
 
-    @GetMapping(value = "/employee/fire_project")
+    @PostMapping(value = "/employee/fire_project")
     public void fireEmployeeFromProject(@RequestParam int employeeId, int projectId) throws SQLException {
         employeeService.fireEmployeeFromProjectById(employeeId, projectId);
     }
 
-    @GetMapping(value = "/employee/salary")
+    @PostMapping(value = "/employee/salary")
     public void inreaseEmployeeSalary(@RequestParam int employeeId, int newSalary) throws SQLException {
         employeeService.increaseEmployeeSalary(employeeId, newSalary);
     }
 
-    @GetMapping(value = "/employee/cabinet")
+    @PostMapping(value = "/employee/cabinet")
     public void changeEmployeeCabinet(@RequestParam int employeeId, int newCabinet) throws SQLException {
         employeeService.changeEmployeeCabinet(employeeId, newCabinet);
     }
 
-    @GetMapping(value = "/employee/remove")
+    @PostMapping(value = "/employee/remove")
     public void removeEmployee(@RequestParam int employeeId) throws SQLException {
         employeeService.removeEmployee(employeeId);
     }
